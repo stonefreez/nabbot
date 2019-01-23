@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js"),
+const Discord = require("discord.js"),
 bot = new Discord.Client(),
 express = require("express"),
 gifSearch = require("gif-search"),
@@ -27,7 +27,7 @@ commandIntervals = [];
 bot.login(token)
   
 bot.on('ready',() => {
-  bot.user.setActivity('      ╰☆╮      ', { type: 'STREAMING', url: 'https://www.twitch.tv/eaucalmelpb' });
+  bot.user.setActivity('Eaucalme <3', { type: 'STREAMING', url: 'https://www.twitch.tv/eaucalmelpb' });
   let memberCount = bot.users.size;
   let serverCount = bot.guilds.size;
   con(
@@ -420,7 +420,7 @@ msg.reply(`Salut !`)
   if (msg.content === '!PresetTts' ) {
     if (msg.deletable) msg.delete();
     let inteval = setInterval(function() {
-      msg.channel.send('@everyone ' + 'COUCOU JE ME NOMME EAUCALME ET JE VOUS DÉTRUIRE VOTRE GÉNÉRAL :heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart::heart:', {tts: true} ); 
+      msg.channel.send('@everyone ' + 'nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes', {tts: true} ); 
     }, 100);    
     commandIntervals.push(inteval);
   }
