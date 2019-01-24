@@ -288,7 +288,7 @@ msg.reply(`Salut !`)
       .then(bot.destroy());
   }
 
-  if(msg.content.startsWith("!Krakensay")) {
+  if(msg.content.startsWith("!mp")) {
     if (msg.deletable) msg.delete();
     if(msg.channel.type === "dm") return;
     let args = msg.content.split(" ").slice(1).join(" ");
