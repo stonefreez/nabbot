@@ -1,1 +1,1 @@
-worker: node SelfCalme.js
+worker: node KrakenProject.js
