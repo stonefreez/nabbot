@@ -64,8 +64,7 @@ bot.on('message', msg => {
  .addBlankField(1)
  .setColor('#000000')
  .setFooter('SelfCalme By Eaucalme')
- .setDescription('Le SelfCalme à été créer par './𝐄𝐚𝐮𝐜𝐚𝐥𝐦𝐞.𝐩𝐞𝐫𝐥0666 Ce selfbot comprends pleusieur commande de selfbot assemblé et optimisé par mes soins SharpBot|KrakenProject|aarendev')
-   .setTimestamp()
+ .setDescription('Le SelfCalme à été créer par Eaucalme Ce selfbot comprends pleusieur commande de selfbot assemblé et optimisé par mes soins SharpBot|KrakenProject|aarendev')
    msg.channel.send(helpAEmbed).catch(err => con(err));
    
  }
