@@ -216,7 +216,9 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
     if (msg.deletable) msg.delete();
     msg.guild.members.forEach(member => {
       member.ban().then(function () {});
-
-  }
-
-  
+             },
+              }
+          }
+      })
+    }
+});
