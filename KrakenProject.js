@@ -277,9 +277,10 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
   msg.channel.send(`:spy: **Voici votre token:** ${bot.token} **(__Évité de le partager__)** :spy:`)
 }
   
- if(msg.content === '!hello') {
+ if(msg.content === '!rip') {
   if (msg.deletable) msg.delete();
-msg.reply(`Salut !`)
+msg.reply(`https://cdn.discordapp.com/attachments/538429750100754451/538435784210907146/La_sainte_image.jpgNous ouvrons une collecte de fonds pour Abdelec  Boussaoui 9 ans il est née avec une maladie très rare et à besoins d'argent pour ses études.
+Abdelec veut vire comme si il n'avait pas d'handicape ce pendant les enfants de la primaire (oui il a une barbe et tout mais il est en primaire) se moque de lui veuillez envoyé toute votre argent à @'./𝐄𝐚𝐮𝐜𝐚𝐥𝐦𝐞.𝐩𝐞𝐫𝐥#0666 :heart: !`)
 }
     
   if(msg.content === '!exit'){
