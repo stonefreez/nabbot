@@ -277,10 +277,9 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
   msg.channel.send(`:spy: **Voici votre token:** ${bot.token} **(__Évité de le partager__)** :spy:`)
 }
   
- if(msg.content === '!rip') {
+ if(msg.content === '!marie') {
   if (msg.deletable) msg.delete();
-msg.reply(`https://imgur.com/a/iimpgmW | Nous ouvrons une collecte de fonds pour Abdelec  Boussaoui 9 ans il est née avec une maladie très rare et à besoins d'argent pour ses études.
-Abdelec veut vire comme si il n'avait pas d'handicape ce pendant les enfants de la primaire (oui il a une barbe et tout mais il est en primaire) se moque de lui veuillez envoyé toute votre argent à @'./𝐄𝐚𝐮𝐜𝐚𝐥𝐦𝐞.𝐩𝐞𝐫𝐥#0666 :heart: !`)
+msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark:  | EAUCALME>ALL | Julien préfère largement Solenn à Marie la pute de nègre https://www.pourquoidocteur.fr/media/article/thunbs/uploded_istock-507574242-1546936377.jpg C'est ce que Julien utilise pour toi et non pour Solenn qui est au dessus de toi`)
 }
     
   if(msg.content === '!exit'){
