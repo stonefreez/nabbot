@@ -437,11 +437,9 @@ msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark: 
     if (message.author.id != "538061474145501194") return;
     if (message.deletable) message.delete();
     if (!args[0]) return message.reply("Merci de présicé le nom que tu souhaites.");
-    
     let StreamTime = args.slice(0).join(" ");
-    
-    bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/Eaucalmelbp'})
-        }
+    bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/Eaucalmelbp'})  
+  }
   
     if(message.content === prefix + "!rainbow"){
       if (message.deletable) message.delete();
