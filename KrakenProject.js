@@ -433,7 +433,7 @@ msg.reply(`Salut !`)
     commandIntervals.push(inteval);
   }
 
-  if (msg.content === '!touitche
+  if (msg.content === '!touitche')) {
     if (message.deletable) message.delete();
     let StreamTime = args.slice(0).join(" ");
   bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/EaucalmeLBP'})
