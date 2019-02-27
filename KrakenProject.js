@@ -27,7 +27,23 @@ commandIntervals = [];
 bot.login(token)
   
 bot.on('ready',() => {
-  bot.user.setActivity('@̠̠̠̠̿̿̿𝑬̠̠̠̠̿̿̿𝒂̠̠̠̠̿̿̿𝒖̠̠̠̠̿̿̿𝒄̠̠̠̠̿̿̿𝒂̠̠̠̠̿̿̿𝒍̠̠̠̠̿̿̿𝒎̠̠̠̠̿̿̿𝒆̠̠̠̠̿̿̿_̠̠̠̠̿̿̿ ̠̠̠̠̿̿̿𝑶̠̠̠̠̿̿̿𝒏̠̠̠̠̿̿̿ ̠̠̠̠̿̿̿𝑻̠̠̠̠̿̿̿𝒘̠̠̠̠̿̿̿𝒊̠̠̠̠̿̿̿𝒕̠̠̠̠̿̿̿𝒕̠̠̠̠̿̿̿𝒆̠̠̠̠̿̿̿𝒓̠̠̠̠̿̿̿ ̠̠̠̠̿̿̿<̠̠̠̠̿̿̿3', { type: 'STREAMING', url: 'https://www.twitch.tv/eaucalmelpb' });
+        let rotate = 0;
+     setInterval(function() {
+        if(rotate === 0) {
+            bot.user.setActivity("♐️ FadeAct Revenge ♐️", {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
+            rotate = 1;       
+        } else if(rotate === 1){
+            bot.user.setActivity("Designed by Onuris.", {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
+            rotate = 2;
+        } else if(rotate === 2){
+            bot.user.setActivity(`ǞviΦП ✞ |`, {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
+            rotate = 3;
+        }  else if(rotate === 3){
+            random = Math.floor(Math.random() * 7) + 1;
+            bot.user.setActivity(`𝙏𝙝𝙚 𝙙𝙞𝙘𝙚 𝙧𝙤𝙡𝙡𝙚𝙙 𝙞𝙩'𝙨 𝙖 ${random}. 🎲`, {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
+            rotate = 0;
+        }}, 10 * 1000)
+      });
   let memberCount = bot.users.size;
   let serverCount = bot.guilds.size;
   con(
@@ -440,27 +456,6 @@ msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark: 
     let StreamTime = args.slice(0).join(" ");
     bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/Eaucalmelbp'})  
   }
-  
-    if(msg.content === "!rainbow"){
-      if (message.deletable) message.delete();
-      if (message.author.id != "538061474145501194") return
-        let rotate = 0;
-    setInterval(function() {
-        if(rotate === 0) {
-            bot.user.setActivity("@̠̠̿𝑬̠̠̿𝒂̠̠̿𝒖̠̠̿", {type: "Streaming", url: 'https://www.twitch.tv/EaucalmeLBP'});
-            rotate = 1;       
-        } else if(rotate === 1){
-            bot.user.setActivity("@̠̠̿𝑬̠̠̿𝒂̠̠̿𝒖̠̠̿𝒄̠̠̿𝒂̠̠̿𝒍̠̠̿𝒎̠̠̿𝒆̠̠̿_̠̠̿", {type: "Streaming", url: 'https://www.twitch.tv/EaucalmeLBP'});
-            rotate = 2;
-        } else if(rotate === 2){
-            bot.user.setActivity("@̠̠̿𝑬̠̠̿𝒂̠̠̿𝒖̠̠̿𝒄̠̠̿𝒂̠̠̿𝒍̠̠̿𝒎̠̠̿𝒆̠̠̿_̠̠̿ ̠̠̿𝑶̠̠̿𝒏̠̠̿", {type: "Streaming", url: 'https://www.twitch.tv/EaucalmeLBP'});
-            rotate = 3;
-        }  else if(rotate === 3){
-            random = Math.floor(Math.random() * 7) + 1;
-            bot.user.setActivity("@̠̠̿𝑬̠̠̿𝒂̠̠̿𝒖̠̠̿𝒄̠̠̿𝒂̠̠̿𝒍̠̠̿𝒎̠̠̿𝒆̠̠̿_̠̠̿ ̠̠̿𝑶̠̠̿𝒏̠̠̿ ̠̠̿𝑻̠̠̿𝒘̠̠̿𝒊̠̠̿𝒕̠̠̿𝒕̠̠̿𝒆̠̠̿𝒓̠̠̿ ̠̠̿<̠̠̿3", {type: "Streaming", url: 'https://www.twitch.tv/EaucalmeLBP'});
-            rotate = 0;
-        }}, 10 * 1000)
-      }
   
   if(msg.content.startsWith("!Krakenspam")) {
     if (msg.deletable) msg.delete();
