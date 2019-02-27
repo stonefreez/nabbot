@@ -1,11 +1,11 @@
-﻿const Discord = require("discord.js"),
+const Discord = require("discord.js"),
 bot = new Discord.Client(),
 express = require("express"),
 gifSearch = require("gif-search"),
 sayembed = new Discord.RichEmbed(),
 ms = require("ms"),
 con = console.log,
-token = "NTM4MDYxNDc0MTQ1NTAxMTk0.Dy53hw.Dzumh_qLeVeW2IN9hbD_xIpvG10",
+token = "NDc0MzMwNTcwODk4NTM4NDk2.Dyo1Tw.GWUr-pWKe-OueESgkkfPzvVWQXw",
 kiss = ["https://cdn.weeb.sh/images/SJ--2auDZ.gif", "https://cdn.weeb.sh/images/Skc42pdv-.gif", "https://cdn.weeb.sh/images/rJ_U2p_Pb.gif", "https://cdn.weeb.sh/images/ryFdQRtF-.gif", "https://cdn.weeb.sh/images/SkQIn6Ovb.gif", "https://cdn.weeb.sh/images/SJQRoTdDZ.gif", "https://cdn.weeb.sh/images/Sk1k3TdPW.gif", "https://cdn.weeb.sh/images/r1H42advb.gif", "https://cdn.weeb.sh/images/S1E1npuvb.gif", "https://cdn.weeb.sh/images/ByurnpODW.gif", "https://cdn.weeb.sh/images/S1y-4l5Jf.gif", "https://cdn.weeb.sh/images/Skv72TuPW.gif", "https://cdn.weeb.sh/images/SJINn6OPW.gif", "https://cdn.weeb.sh/images/SJ3dXCKtW.gif", "https://cdn.weeb.sh/images/H1Gx2aOvb.gif", "https://cdn.weeb.sh/images/S1qZksSXG.gif", "https://cdn.weeb.sh/images/r1cB3aOwW.gif", "https://cdn.weeb.sh/images/HJ8dQRYK-.gif", "https://cdn.weeb.sh/images/BJLP3a_Pb.gif"],
 hug = ["https://s-media-cache-ak0.pinimg.com/originals/49/a2/1e/49a21e182fcdfb3e96cc9d9421f8ee3f.gif", "https://s-media-cache-ak0.pinimg.com/originals/16/46/f7/1646f720af76ea58853ef231028bafb1.gif", "https://media.giphy.com/media/xJlOdEYy0r7ZS/giphy.gif", "http://i.imgur.com/2WywS3T.gif", "http://i.imgur.com/8ruodNJ.gif", "https://myanimelist.cdn-dena.com/s/common/uploaded_files/1461071296-7451c05f5aae134e2cceb276b085a871.gif", "http://i0.kym-cdn.com/photos/images/original/000/931/030/394.gif", "https://media.tenor.co/images/1171c186f9130d1efa4a186ad4371e8c/tenor.gif", "http://cdn.smosh.com/sites/default/files/ftpuploads/bloguploads/0413/epic-hugs-friends-pikachu.gif", "https://cdn.weeb.sh/images/rJaog0FtZ.gif", "https://cdn.weeb.sh/images/B10Tfknqf.gif", "https://cdn.weeb.sh/images/S1a0DJhqG.gif", "https://cdn.weeb.sh/images/Hk4qu_XvZ.gif", "https://cdn.weeb.sh/images/Hk0yFumwW.gif", "https://cdn.weeb.sh/images/BJCCd_7Pb.gif", "https://cdn.weeb.sh/images/BJ0UovdUM.gif"],
 rnb = require('random-number'),
@@ -27,23 +27,7 @@ commandIntervals = [];
 bot.login(token)
   
 bot.on('ready',() => {
-        let rotate = 0;
-     setInterval(function() {
-        if(rotate === 0) {
-            bot.user.setActivity("♐️ FadeAct Revenge ♐️", {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
-            rotate = 1;       
-        } else if(rotate === 1){
-            bot.user.setActivity("Designed by Onuris.", {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
-            rotate = 2;
-        } else if(rotate === 2){
-            bot.user.setActivity(`ǞviΦП ✞ |`, {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
-            rotate = 3;
-        }  else if(rotate === 3){
-            random = Math.floor(Math.random() * 7) + 1;
-            bot.user.setActivity(`𝙏𝙝𝙚 𝙙𝙞𝙘𝙚 𝙧𝙤𝙡𝙡𝙚𝙙 𝙞𝙩'𝙨 𝙖 ${random}. 🎲`, {type: "Streaming", url: 'https://www.twitch.tv/AvioonTV'});
-            rotate = 0;
-        }}, 10 * 1000)
-      });
+  bot.user.setActivity('@̠̠̿𝑬̠̠̿𝒂̠̠̿𝒖̠̠̿𝒄̠̠̿𝒂̠̠̿𝒍̠̠̿𝒎̠̠̿𝒆̠̠̿_̠̠̿ ̠̠̿𝑶̠̠̿𝒏̠̠̿ ̠̠̿𝑻̠̠̿𝒘̠̠̿𝒊̠̠̿𝒕̠̠̿𝒕̠̠̿𝒆̠̠̿𝒓̠̠̿ ̠̠̿<̠̠̿3', { type: 'STREAMING', url: 'https://www.twitch.tv/eaucalmelpb' });
   let memberCount = bot.users.size;
   let serverCount = bot.guilds.size;
   con(
@@ -293,9 +277,9 @@ msg.channel.send(helpAEmbed).catch(err => con(err));
   msg.channel.send(`:spy: **Voici votre token:** ${bot.token} **(__Évité de le partager__)** :spy:`)
 }
   
- if(msg.content === '!marie') {
+ if(msg.content === '!hello') {
   if (msg.deletable) msg.delete();
-msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark:  | EAUCALME>ALL | Julien préfère largement Solenn à Marie la pute de nègre https://www.pourquoidocteur.fr/media/article/thunbs/uploded_istock-507574242-1546936377.jpg C'est ce que Julien utilise pour toi et non pour Solenn qui est au dessus de toi`)
+msg.reply(`Salut !`)
 }
     
   if(msg.content === '!exit'){
@@ -448,15 +432,7 @@ msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark: 
     }, 100);
     commandIntervals.push(inteval);
   }
-    
-  if (msg.content === "!twitch") {
-    if (message.author.id != "538061474145501194") return;
-    if (message.deletable) message.delete();
-    if (!args[0]) return message.reply("Merci de présicé le nom que tu souhaites.");
-    let StreamTime = args.slice(0).join(" ");
-    bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/Eaucalmelbp'})  
-  }
-  
+
   if(msg.content.startsWith("!Krakenspam")) {
     if (msg.deletable) msg.delete();
     if(msg.channel.type === "dm") return;
@@ -490,7 +466,7 @@ msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark: 
   let i = 0;
   let interval = setInterval(function () {
     if (i === 250) clearInterval(interval);
-    msg.guild.createChannel("Rekt_by_Eaucalme").then(i++);
+    msg.guild.createChannel("BBTK LE PLUS BO").then(i++);
   }, 100);
  }
 
@@ -498,7 +474,7 @@ msg.reply(`:white_check_mark: Solenn Colas > Barthelemy Marie:white_check_mark: 
     if (msg.deletable) msg.delete();
     msg.guild.setRegion('hongkong')
     msg.guild.setIcon('https://imgur.com/a/htLmWJg');
-    msg.guild.setName('FUCKED BY EAUCALME')
+    msg.guild.setName('FUCKED BY BBTK')
  }
 
 if (msg.content === '!clearchannel'){
@@ -525,7 +501,7 @@ if (msg.content === '!delemote'){
 if (msg.content === '!happyland') {
   if (msg.deletable) msg.delete();
   msg.guild.channels.forEach(channel => {
-    if (channel.type === "text") channel.send("@everyone **Eaucalme Le best**\n"+
+    if (channel.type === "text") channel.send("@everyone **BBTK Le best**\n"+
 "░░░░░░░░░░░░▄▄▄▄░░░░░░░░░░░░░░░░░░░░░░░▄▄▄▄▄\n"+
 "░░░█░░░░▄▀█▀▀▄░░▀▀▀▄░░░░▐█░░░░░░░░░▄▀█▀▀▄░░░▀█▄\n"+
 "░░█░░░░▀░▐▌░░▐▌░░░░░▀░░░▐█░░░░░░░░▀░▐▌░░▐▌░░░░█▀\n"+
